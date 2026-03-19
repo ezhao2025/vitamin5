@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import CounterPage from "./pages/CounterPage/CounterPage";
 
+
 function App() {
   return (
     <div>

@@ -2,33 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
-// Router
 import { BrowserRouter } from "react-router-dom";
-
-// Theme (styled-components version)
-import { ThemeProvider } from "styled-components";
-
-// Simple theme object (you can customize later)
-const theme = {
-  colors: {
-    primary: "#4CAF50",
-    secondary: "#333",
-    background: "#f5f5f5",
-  },
-};
+import { ThemeProvider } from "./context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ThemeProvider>
         <App />
-      </BrowserRouter>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
-
 //
 //
 //// NEW IMPORTS
